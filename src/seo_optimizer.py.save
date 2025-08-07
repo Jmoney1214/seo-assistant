@@ -1,0 +1,62 @@
+print("Loading product feed…")
+df = pd.read_csv(INPUT_CSV, sep="\t")
+print("Loaded rows:", len(df))
+print("Columns:", df.columns.tolist())
+
+def debug_func(row):
+    print("Processing title:", row['title'])
+    return optimize_seo(row['title'], row['description'])
+
+print("Beginning SEO optimization…")
+df[['new_title', 'meta_description', 'image_alt']] = df.apply(
+    debug_func,
+    axis=1, result_type='expand'
+)
+print("Writing CSV output…")
+df.to_csv(OUTPUT_CSV, index=False)
+print(f"Optimized file saved as {OUTPUT_CSV}")
+import os
+import pandas as pd
+import openai
+from dotenv import load_dotenv
+
+load_dotenv()
+
+client = openai.OpenAI()  # NEW: create client instance
+
+INPUT_CSV = "products_feed.csv"
+OUTPUT_CSV = "optimized_gmc_feed.csv"
+
+def optimize_seo(title, description):
+    prompt = (
+        f"Rewrite the following for e-commerce SEO. "
+        f"1. New product title (70 chars max, compelling, keyword-rich). "
+        f"2. Meta description (140-160 chars, with brand and call-to-action). "
+        f"3. Image alt tag.\n\n"
+        f"Title: {title}\nDescription: {description}\n"
+        f"Format the output as:\n"
+        f"Title: ...\nMeta: ...\nAlt: ..."
+    )
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "You are an e-commerce SEO expert."},
+            {"role": "user", "content": prompt}
+        ],
+        max_tokens=350,
+        temperature=0.4,
+    )
+    result = response.choices[0].message.content
+    lines = result.split('\n')
+    new_title = lines[0].replace('Title: ', '').strip() if len(lines) > 0 else ""
+    meta = lines[1].replace('Meta: ', '').strip() if len(lines) > 1 else ""
+    alt = lines[2].replace('Alt: ', '').strip() if len(lines) > 2 else ""
+    return new_title, meta, alt
+
+df = pd.read_csv(INPUT_CSV, sep="\t")
+df[['new_title', 'meta_description', 'image_alt']] = df.apply(
+    lambda row: optimize_seo(row['title'], row['description']),
+    axis=1, result_type='expand'
+)
+df.to_csv(OUTPUT_CSV, index=False)
+print(f"Optimized file saved as {OUTPUT_CSV}")

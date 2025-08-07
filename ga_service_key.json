@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cityhive-467716",
+  "private_key_id": "5afd1ed4fbc10b3c632222441392c12de30fc9e5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDET72I+lwxHdz5\nEKSYXVyD1tg/WwHaf8Rh0GO9oYnb0lsh6mo86p9CDBqrpgJg18Md7/3E7oPrjf1h\nehH4T2u3O2Gnrdv9b5J4D0qSzV5IA+oZFPOaTBlaIeL3ZaGxbeMR9rkqPnWqXtCb\nZYAnqHyKYdGGVEk9TAUSEUHho0kmH/ac5P4rlOmm48kuyVyYBE3dadyyy9QQr2y3\nMaTGpoqJzzKiV7CKX7GRwFWUkmzB3P29PDzjla5Q6u5L7y4h/4wEC7fTuL1BcD4+\n6FFUILTnIahPyf6y9WHJM7ieIbEQn2AZG5dYNLz5yB8Jv7P8agwimcL15eh+jabc\nzq6sq6y9AgMBAAECggEAD7EaYs+KXNW42Fgozqdl0gGzfZWiIguk+wxGhhMFG0MR\ntvYPLGk1C46T94UDUHzmszxVV1oZGumEZ7feJbBULqG/66tAIrO6AZVNU3Xi3lRL\nxdn7d+mzJsB/LTcx6SYcvg6anKJrUuVAfQTBwp8bPLosHqCa+HFHatCM04MIbD7X\n1sP3ZCvFsIbtL5492ER1/SVujdpMaCGY14iUH9Omfx8/gqb8b0tjJV9xlFAnQ2cA\nlEeU444kocVQsb4piSfsfRddM6SkZABItIfUFi++TvhWA55uENAma3KlW4MiONoE\nYlVfGM2GFmb9mDTv2Jqhk0q63I1f9SGRN+/Yu1slWQKBgQD/+eNxcYTJE8B89nrL\nUgcTw7QeIuY8pCQV/SsZL4bP8TWgSKBWnzBM5APMeHnBNFFSfxbfZ3UdnDYCeiyC\nY+8udjVhS1lPvx6T7ZaC0jnQIZ1lH+ZU8d0npFF0nNPE8iONGnZ8cQvHdrpANkTo\nZtCLkOtFYOwwZmiRZSmBmmybJQKBgQDEVG1qGupxyYS20+gd/jDiZrjPKMes8hra\ni9dECBXpM/jxlDthcmydpGTpyGsp/QqoaCcK+wYpyRuSCqh7+XtA4UIjnJl/b8oY\nS+CT1Ad01SfSKD13NF5BjQwXC/p7Dyfo/ArdP0vGWorvupmkBP7oOe6ZHQ7Fzj0a\nDXjLppujuQKBgDw/U4IC5u7wwDBpTvOF5faH7F/fdPM26utl//vYjNFqg2WrUlmw\n9AxU6nP4syd/KdjR4s9IKW+Dsc6ZdNpnrQbxeZThyC6V3BuTIwa9di//iW0gufSq\nTJQk/6sDsnA7UZTHcrXNYalbz3CHlWZhtJn0zPsyWcT2hYwbFE7VytQlAoGAJtGC\nqL4VqNXtdbDEblm6FKm21M79XAaqpJeNwpfOrUNnb2ydqRDUxP6iLU9BURYFK3Mc\ndSFZAJ4Q43lUAt87LYLcbuoht37E+LTX/KKprsIOk5D9RjqGgHOA9nWZ2wcOHxTm\nmQRQ2TFB01CT3EhYllYOBRwntZinoCUVwz53+5ECgYAqBTGQ0l/1dYc+qh7IiMC0\n2dxQ12RxN6v7FbpF9qKNN78SlA3GFBaf+IaJA7rVZ0PCx6LDHSlEI5iAVfvJ2/kE\ncyJO7eOM3XPeyb2aRFmlJe5RwlGQd+1DKzsBRqpPTYa4E/hI2BXZd3AvOmBMivoc\nP7JFrHJa6eRKL5cM3xUBWQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "legacywineandliquor-gmail-com@cityhive-467716.iam.gserviceaccount.com",
+  "client_id": "103668676145870382502",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/legacywineandliquor-gmail-com%40cityhive-467716.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

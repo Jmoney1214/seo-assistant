@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Summary</title>
+</head>
+<body>
+
+  <h2>Get User Traffic for July 2025</h2>
+  <button onclick="getTraffic()">Fetch Traffic</button>
+
+  <pre id="output"></pre>
+
+  <script>
+    function getTraffic() {
+      fetch('http://localhost:8100/get_user_traffic_summary', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          start_date: '2025-07-01',
+          end_date: '2025-07-31'
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('output').textContent = data.summary || JSON.stringify(data, null, 2);
+      })
+      .catch(err => {
+        document.getElementById('output').textContent = 'Error: ' + err;
+      });
+    }
+  </script>
+
+</body>
+</html>
+
